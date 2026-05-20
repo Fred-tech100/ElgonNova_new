@@ -206,21 +206,62 @@
     .portfolio-tag { font-family: var(--font-mono); font-size: .7rem; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
     .portfolio-name { font-family: var(--font-head); font-size: 1rem; color: var(--white); letter-spacing: 1px; }
 
-    /* ── TEAM ── */
-    #team { background: linear-gradient(180deg, #0a0a14 0%, var(--dark) 100%); }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
-    .team-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; text-align: center; transition: all .4s; cursor: none; }
-    .team-card:hover { transform: translateY(-10px); border-color: rgba(255,107,0,.3); box-shadow: 0 20px 50px rgba(255,107,0,.1); }
-    .team-photo-wrap { position: relative; overflow: hidden; height: 220px; }
-    .team-photo-wrap::before { content:''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(5,5,8,.9) 100%); z-index: 1; }
-    .team-photo { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; filter: brightness(.9) saturate(1.1); display: block; }
-    .team-card:hover .team-photo { transform: scale(1.06); filter: grayscale(0) brightness(1); }
-    .team-info { padding: 22px 18px; }
-    .team-name { font-family: var(--font-head); font-size: .9rem; color: var(--white); margin-bottom: 4px; letter-spacing: 1px; }
-    .team-role { font-family: var(--font-mono); font-size: .73rem; color: var(--orange); letter-spacing: 2px; margin-bottom: 16px; }
-    .team-socials { display: flex; justify-content: center; gap: 12px; }
-    .team-socials a { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); display: grid; place-items: center; color: var(--gray); font-size: .8rem; transition: all .3s; text-decoration: none; }
-    .team-socials a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-glow); }
+/* ── TEAM (improved images) ── */
+#team { background: linear-gradient(180deg, #0a0a14 0%, var(--dark) 100%); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+.team-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; text-align: center; transition: all .4s; cursor: none; }
+.team-card:hover { transform: translateY(-10px); border-color: rgba(255,107,0,.3); box-shadow: 0 20px 50px rgba(255,107,0,.1); }
+
+/* ——— new round image container ——— */
+.team-photo-wrap {
+  position: relative;
+  width: 80%;                /* controls size relative to card width */
+  max-width: 180px;          /* limits maximum size */
+  margin: 24px auto 0 auto;  /* center horizontally, add top spacing */
+  aspect-ratio: 1 / 1;       /* forces perfect square */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,107,0,0.3);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition: all .3s ease;
+}
+
+/* optional glowing ring on hover */
+.team-card:hover .team-photo-wrap {
+  border-color: var(--orange);
+  box-shadow: 0 15px 30px rgba(255,107,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills the circle cleanly, crops evenly */
+  display: block;
+  transition: transform .5s ease;
+  filter: brightness(0.95) saturate(1.05);
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.08);
+  filter: brightness(1.02) saturate(1.1);
+}
+
+/* remove the previous gradient overlay if you don't need it */
+.team-photo-wrap::before {
+  display: none;
+}
+
+/* adjust spacing inside the card */
+.team-info {
+  padding: 18px 18px 24px;
+}
+
+/* rest stays the same */
+.team-name { font-family: var(--font-head); font-size: .9rem; color: var(--white); margin-bottom: 4px; letter-spacing: 1px; }
+.team-role { font-family: var(--font-mono); font-size: .73rem; color: var(--orange); letter-spacing: 2px; margin-bottom: 16px; }
+.team-socials { display: flex; justify-content: center; gap: 12px; }
+.team-socials a { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); display: grid; place-items: center; color: var(--gray); font-size: .8rem; transition: all .3s; text-decoration: none; }
+.team-socials a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-glow); }
 
     /* ── CEO ── */
     #ceo { background: linear-gradient(135deg, #0d0d1f 0%, #130d08 100%); position: relative; overflow: hidden; }
