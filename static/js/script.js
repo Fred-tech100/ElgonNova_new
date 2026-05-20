@@ -169,29 +169,294 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // ── TESTIMONIALS SLIDER ──
-let testiIdx = 0;
-const track = document.getElementById('testiTrack');
-const cards = track.querySelectorAll('.testi-card');
-function updateTesti() {
-  const cardW = cards[0].offsetWidth + 24;
-  const maxIdx = Math.max(0, cards.length - Math.floor(track.parentElement.offsetWidth / cardW));
-  testiIdx = Math.min(testiIdx, maxIdx);
-  track.style.transform = `translateX(-${testiIdx * cardW}px)`;
-}
-document.getElementById('testiNext').addEventListener('click', () => { testiIdx++; updateTesti(); });
-document.getElementById('testiPrev').addEventListener('click', () => { testiIdx = Math.max(0, testiIdx-1); updateTesti(); });
-let testiAuto = setInterval(() => { testiIdx++; updateTesti(); }, 4500);
-track.addEventListener('mouseenter', () => clearInterval(testiAuto));
-track.addEventListener('mouseleave', () => { testiAuto = setInterval(() => { testiIdx++; updateTesti(); }, 4500); });
-// Touch
-let tt = null;
-track.addEventListener('touchstart', e => tt = e.touches[0].clientX);
-track.addEventListener('touchend', e => {
-  if (!tt) return;
-  const d = tt - e.changedTouches[0].clientX;
-  if (Math.abs(d) > 40) { d > 0 ? testiIdx++ : testiIdx = Math.max(0,testiIdx-1); updateTesti(); }
-  tt = null;
-});
+// let testiIdx = 0;
+// const track = document.getElementById('testiTrack');
+// const cards = track.querySelectorAll('.testi-card');
+// function updateTesti() {
+//   const cardW = cards[0].offsetWidth + 24;
+//   const maxIdx = Math.max(0, cards.length - Math.floor(track.parentElement.offsetWidth / cardW));
+//   testiIdx = Math.min(testiIdx, maxIdx);
+//   track.style.transform = `translateX(-${testiIdx * cardW}px)`;
+// }
+// document.getElementById('testiNext').addEventListener('click', () => { testiIdx++; updateTesti(); });
+// document.getElementById('testiPrev').addEventListener('click', () => { testiIdx = Math.max(0, testiIdx-1); updateTesti(); });
+// let testiAuto = setInterval(() => { testiIdx++; updateTesti(); }, 4500);
+// track.addEventListener('mouseenter', () => clearInterval(testiAuto));
+// track.addEventListener('mouseleave', () => { testiAuto = setInterval(() => { testiIdx++; updateTesti(); }, 4500); });
+// // Touch
+// let tt = null;
+// track.addEventListener('touchstart', e => tt = e.touches[0].clientX);
+// track.addEventListener('touchend', e => {
+//   if (!tt) return;
+//   const d = tt - e.changedTouches[0].clientX;
+//   if (Math.abs(d) > 40) { d > 0 ? testiIdx++ : testiIdx = Math.max(0,testiIdx-1); updateTesti(); }
+//   tt = null;
+// });
+(function() {
+    // DOM elements
+    const track = document.getElementById('testiTrack');
+    const slides = Array.from(document.querySelectorAll('.testi-card'));
+    const prevBtn = document.getElementById('testiPrev');
+    const nextBtn = document.getElementById('testiNext');
+    const dotsContainer = document.getElementById('dotsContainer');
+    const testimonialWrap = document.getElementById('testimonialWrap');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let containerWidth = 0;
+    let autoplayInterval = null;
+    const AUTOPLAY_DELAY = 4000; // 4 seconds
+    let isHovering = false;
+
+    // ---------- Helper: update wrapper height based on active card (no wasted spaces) ----------
+    function updateWrapHeight() {
+      if (!testimonialWrap || !slides.length) return;
+      const activeCard = slides[currentIndex];
+      if (!activeCard) return;
+      // get computed height including margins/padding
+      const cardHeight = activeCard.offsetHeight;
+      // apply height smoothly (CSS transition is active)
+      testimonialWrap.style.height = `${cardHeight}px`;
+    }
+
+    // ---------- Reset height after transition of track ----------
+    function onTrackTransitionEnd() {
+      updateWrapHeight();
+    }
+
+    // ---------- Update carousel transform, then adjust height after transition ----------
+    function updateCarousel(instantHeight = false) {
+      if (!track) return;
+      const width = testimonialWrap.clientWidth;
+      containerWidth = width;
+      const translateValue = -currentIndex * containerWidth;
+      track.style.transform = `translateX(${translateValue}px)`;
+      
+      // Update active dot
+      updateDotsActive();
+
+      if (instantHeight) {
+        updateWrapHeight();
+      } else {
+        // wait for transition end to get final height after sliding
+        // but we also call after a short frame to be safe
+        setTimeout(() => updateWrapHeight(), 50);
+      }
+    }
+
+    // Recalculate dimensions on window resize / container resize
+    function recalcDimensions() {
+      if (!testimonialWrap) return;
+      const newWidth = testimonialWrap.clientWidth;
+      if (newWidth !== containerWidth && containerWidth !== 0) {
+        containerWidth = newWidth;
+        const translateValue = -currentIndex * containerWidth;
+        track.style.transform = `translateX(${translateValue}px)`;
+      } else if (containerWidth === 0) {
+        containerWidth = testimonialWrap.clientWidth;
+        updateCarousel(true);
+      } else {
+        // maintain position
+        const translateVal = -currentIndex * testimonialWrap.clientWidth;
+        track.style.transform = `translateX(${translateVal}px)`;
+      }
+      // recalc wrap height to match new active card content height
+      updateWrapHeight();
+    }
+
+    // ------ Dots generation & active state ------
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('dot');
+        dot.setAttribute('data-index', i);
+        dot.setAttribute('aria-label', `View testimonial ${i+1}`);
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (i === currentIndex) return;
+          currentIndex = i;
+          updateCarousel();
+          resetAutoplay();     // reset timer after manual click
+        });
+        dotsContainer.appendChild(dot);
+      }
+      updateDotsActive();
+    }
+
+    function updateDotsActive() {
+      const dots = document.querySelectorAll('.dot');
+      if (!dots.length) return;
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+      });
+    }
+
+    // ------ Navigation (with loop) ------
+    function goToNext() {
+      if (totalSlides === 0) return;
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+      resetAutoplay();
+    }
+
+    function goToPrev() {
+      if (totalSlides === 0) return;
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+      resetAutoplay();
+    }
+
+    // ------ Autoplay logic (4 seconds, stops on hover/click, restarts) ------
+    function startAutoplay() {
+      if (autoplayInterval) clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(() => {
+        if (!isHovering) {
+          goToNext();
+        }
+      }, AUTOPLAY_DELAY);
+    }
+
+    function stopAutoplay() {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    // handle hover state (pause autoplay)
+    function bindAutoplayHover() {
+      if (!testimonialWrap) return;
+      testimonialWrap.addEventListener('mouseenter', () => {
+        isHovering = true;
+        stopAutoplay();
+      });
+      testimonialWrap.addEventListener('mouseleave', () => {
+        isHovering = false;
+        startAutoplay();
+      });
+      // also pause if arrows/dots hovered? keep global, but extra: control buttons hover not needed
+      const controls = document.querySelector('.testi-controls');
+      if (controls) {
+        controls.addEventListener('mouseenter', () => {
+          isHovering = true;
+          stopAutoplay();
+        });
+        controls.addEventListener('mouseleave', () => {
+          isHovering = false;
+          startAutoplay();
+        });
+      }
+    }
+
+    // ------ Listen for transition end to keep height exactly fit ------
+    function bindTrackTransition() {
+      if (!track) return;
+      track.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'transform') {
+          updateWrapHeight();
+        }
+      });
+    }
+
+    // ------ image load / resize safety: ensure height re-calc when images fully loaded ------
+    function observeImagesAndResize() {
+      const images = document.querySelectorAll('.testi-avatar');
+      let pending = 0;
+      const recalcOnLoad = () => {
+        recalcDimensions();
+        updateWrapHeight();
+      };
+      images.forEach(img => {
+        if (img.complete) {
+          // already loaded
+        } else {
+          pending++;
+          img.addEventListener('load', recalcOnLoad);
+          img.addEventListener('error', recalcOnLoad);
+        }
+      });
+      window.addEventListener('resize', () => {
+        recalcDimensions();
+      });
+      // additional MutationObserver for any content change (safety)
+      const observer = new ResizeObserver(() => {
+        recalcDimensions();
+      });
+      if (testimonialWrap) observer.observe(testimonialWrap);
+    }
+
+    // -------- Initialization + manual slide adjustment and autoplay --------
+    function initCarousel() {
+      if (!track || !prevBtn || !nextBtn || !testimonialWrap) return;
+      containerWidth = testimonialWrap.clientWidth;
+      // initial position
+      updateCarousel(true);
+      
+      // set initial height after a tick to avoid flash
+      setTimeout(() => {
+        updateWrapHeight();
+      }, 20);
+
+      // event listeners for arrows
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToPrev();
+      });
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToNext();
+      });
+
+      // keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goToPrev();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goToNext();
+        }
+      });
+
+      // touch support (swipe)
+      let touchStartX = 0;
+      let touchEndX = 0;
+      testimonialWrap.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      testimonialWrap.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const delta = touchEndX - touchStartX;
+        if (Math.abs(delta) > 50) {
+          if (delta > 0) goToPrev();
+          else goToNext();
+        }
+      }, { passive: true });
+
+      // dots
+      buildDots();
+      // autoplay
+      startAutoplay();
+      bindAutoplayHover();
+      bindTrackTransition();
+      observeImagesAndResize();
+    }
+
+    // final launch after DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+      initCarousel();
+    }
+  })();
 
 // ── FAQ ACCORDION ──
 document.querySelectorAll('.faq-q').forEach(q => {
