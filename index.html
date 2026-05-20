@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElgonNova Technologies | Cutting-Edge IT Solutions in Mbale, Uganda</title>
+  <meta name="description" content="ElgonNova Technologies – Premier technology company in Mbale, Uganda. Offering web development, custom software, IoT, data analysis, IT consultancy, computer repair, and professional printing services." />
+  <meta name="keywords" content="ElgonNova Technologies, IT company Mbale Uganda, web development Uganda, software development, IoT Uganda, data analysis, computer repair Mbale, IT consultancy" />
+  <meta name="author" content="ElgonNova Technologies" />
+  <meta property="og:title" content="ElgonNova Technologies | Cutting-Edge IT Solutions" />
+  <meta property="og:description" content="Premier technology company in Mbale, Uganda offering innovative IT solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elgonnova.online" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ElgonNova Technologies" />
+  <meta name="twitter:description" content="Cutting-edge IT solutions from the Slopes of Mt Elgon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="static/css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="static/images/elgonnova_logo.png" />
+
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader" role="status" aria-label="Loading ElgonNova Technologies">
+  <div class="loader-logo">Elgon<span>Nova</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">INITIALIZING...</div>
+</div>
+<!--HEADER-->
+<header></header>
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-label="ElgonNova Technologies Home">
+    <div class="logo-icon" aria-hidden="true"><img src="static/images/elgonnova_logo.png" alt="ElgonNova Technologies Logo"></div>
+    Elgon<span>Nova</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" aria-label="Get a free consultation">GET A QUOTE</a>
+  <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="#about" class="mobile-link">ABOUT</a>
+  <a href="#services" class="mobile-link">SERVICES</a>
+  <a href="#process" class="mobile-link">PROCESS</a>
+  <a href="#portfolio" class="mobile-link">PORTFOLIO</a>
+  <a href="#team" class="mobile-link">TEAM</a>
+  <a href="#testimonials" class="mobile-link">TESTIMONIALS</a>
+  <a href="#contact" class="mobile-link">CONTACT</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-slider" id="heroSlider" aria-hidden="true">
+    <div class="hero-slide active"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div id="particles" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">MBALE, UGANDA · EST. 2022</div>
+    <h1 class="hero-title">
+      <span class="line1 reveal reveal-delay-1">INNOVATE.</span>
+      <span class="line2 reveal reveal-delay-2">BUILD. TRANSFORM.</span>
+      <span class="line3 reveal reveal-delay-3">UGANDA'S FUTURE.</span>
+    </h1>
+    <div class="typing-wrap reveal reveal-delay-4">
+      <span id="typing-text"></span><span class="cursor-blink" aria-hidden="true"></span>
+    </div>
+    <p class="hero-desc reveal reveal-delay-5">
+      ElgonNova Technologies delivers world-class digital solutions from the heart of Mbale. 
+      We transform ideas into powerful tech experiences that drive growth across Africa and beyond.
+    </p>
+    <div class="hero-btns reveal reveal-delay-6">
+      <a href="#services" class="btn-primary" aria-label="Explore our services">
+        <i class="fas fa-rocket" aria-hidden="true"></i> GET STARTED
+      </a>
+      <a href="#contact" class="btn-outline" aria-label="Contact us today">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i> CONTACT US
+      </a>
+    </div>
+  </div>
+
+  <div class="slider-nav" aria-label="Slider navigation">
+    <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+    <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+    <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+    <button class="slider-dot" data-index="4" aria-label="Slide 5"></button>
+    <button class="slider-dot" data-index="5" aria-label="Slide 6"></button>
+    <button class="slider-dot" data-index="6" aria-label="Slide 7"></button>
+  </div>
+  <div class="slider-arrows" aria-hidden="true">
+    <button class="arrow-btn" id="prevSlide" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+    <button class="arrow-btn" id="nextSlide" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip" role="region" aria-label="Company statistics">
+  <div class="stat-item reveal">
+    <span class="stat-num" data-target="75">0</span>
+    <span class="stat-label">Projects Completed</span>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <span class="stat-num" data-target="57">0</span>
+    <span class="stat-label">Happy Clients</span>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <span class="stat-num" data-target="4">0</span>
+    <span class="stat-label">Years Experience</span>
+  </div>
+  <div class="stat-item reveal reveal-delay-4">
+    <span class="stat-num" data-target="24">0</span>
+    <span class="stat-label">Support (Hours/Day)</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-grid">
+    <div class="about-visual reveal from-left">
+      <div class="about-img-wrap">
+        <img src="static/images/africa_tech.jpeg" alt="ElgonNova team collaborating on technology projects" class="about-img" loading="lazy" />
+      </div>
+      <div class="about-badge">
+        <span class="num">4+</span>
+        <span class="label">YEARS OF<br>EXCELLENCE</span>
+      </div>
+    </div>
+    <div class="about-text reveal from-right">
+      <div class="section-tag">OUR STORY</div>
+      <h2 class="section-title" id="about-heading">Pioneering <span>Digital Excellence</span> in East Africa</h2>
+      <p>ElgonNova Technologies was founded with a vision to use technology to transform businesses, empower communities, and contribute to Africa’s digital growth. Based in Mbale, Uganda, we started with a passion for innovation and a commitment to delivering reliable, affordable, and modern technology solutions.
+        From website and software development to IoT, graphics design, IT consultancy, computer repair, data analysis, and professional printing services, we strive to help businesses and individuals succeed in the digital age. As we grow, we aim to expand into areas such as machine learning, cybersecurity, networking, and computer training to further support Africa’s technological future.
+        We believe Africa’s challenges can be solved through African innovation, and we are committed to building technology solutions that create lasting impact across the continent.
+       </p>
+      
+
+      <div class="about-values">
+        <div class="value-card reveal reveal-delay-1">
+          <i class="fas fa-bullseye" aria-hidden="true"></i>
+          <h4>OUR MISSION</h4>
+          <p>To deliver innovative, reliable, and affordable technology solutions that empower businesses, organizations, and communities across Africa. We are committed to providing high-quality services in software and website development, IoT, graphics design, IT consultancy, data analysis, computer repair and maintenance, and professional printing while embracing emerging technologies such as machine learning, cybersecurity, networking, and digital training to drive Africa’s technological growth and transformation.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <i class="fas fa-eye" aria-hidden="true"></i>
+          <h4>OUR VISION</h4>
+          <p>To become Africa’s leading technology innovation company, empowering businesses, institutions, and communities through smart digital solutions that drive sustainable development, economic transformation, and technological independence across the continent.
+             At ElgonNova Technologies, we envision an Africa where technology is not only consumed but created locally to solve African challenges, inspire innovation, and unlock opportunities for future generations.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <i class="fas fa-star" aria-hidden="true"></i>
+          <h4>EXCELLENCE</h4>
+          <p>We maintain the highest standards in every project, ensuring quality that matches global benchmarks.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-4">
+          <i class="fas fa-handshake" aria-hidden="true"></i>
+          <h4>INTEGRITY</h4>
+          <p>Honest, transparent relationships built on trust form the foundation of everything we do.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">WHAT WE DO</div>
+    <h2 class="section-title reveal" id="services-heading">Our <span>Premium Services</span></h2>
+    <p class="section-sub reveal">From concept to deployment, we deliver end-to-end technology solutions that drive real results for your business.</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card reveal reveal-delay-1" aria-labelledby="svc1">
+      <span class="service-num">01</span>
+      <div class="service-icon si-web" aria-hidden="true"><i class="fas fa-globe"></i></div>
+      <h3 id="svc1">Website Development</h3>
+      <p>Stunning, high-performance websites built with modern frameworks. From landing pages to complex e-commerce platforms — responsive, SEO-optimized, and blazing fast.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about website development">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-2" aria-labelledby="svc2">
+      <span class="service-num">02</span>
+      <div class="service-icon si-software" aria-hidden="true"><i class="fas fa-code"></i></div>
+      <h3 id="svc2">Custom Software Development</h3>
+      <p>Tailor-made software solutions engineered for your specific business needs. From desktop apps to enterprise systems — we build scalable, maintainable software that grows with you.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about custom software">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-3" aria-labelledby="svc3">
+      <span class="service-num">03</span>
+      <div class="service-icon si-repair" aria-hidden="true"><i class="fas fa-tools"></i></div>
+      <h3 id="svc3">Computer Repair & Maintenance</h3>
+      <p>Professional hardware and software repair services. Laptops, desktops, servers, and network infrastructure — quick turnaround, expert diagnostics, and reliable maintenance contracts.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about computer repair">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-4" aria-labelledby="svc4">
+      <span class="service-num">04</span>
+      <div class="service-icon si-data" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+      <h3 id="svc4">Data Analysis</h3>
+      <p>Transform raw data into actionable insights. We provide comprehensive data analysis, visualization dashboards, predictive analytics, and business intelligence solutions that inform smarter decisions.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about data analysis">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-5" aria-labelledby="svc5">
+      <span class="service-num">05</span>
+      <div class="service-icon si-iot" aria-hidden="true"><i class="fas fa-microchip"></i></div>
+      <h3 id="svc5">Internet of Things (IoT)</h3>
+      <p>Connect the physical and digital worlds. Smart sensors, automation systems, remote monitoring, and IoT infrastructure — we design and deploy intelligent connected solutions for agriculture, industry, and smart cities.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about IoT">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-6" aria-labelledby="svc6">
+      <span class="service-num">06</span>
+      <div class="service-icon si-consult" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+      <h3 id="svc6">IT Consultancy</h3>
+      <p>Strategic technology guidance that aligns IT with your business goals. Network architecture, cybersecurity assessments, digital transformation roadmaps, and IT infrastructure planning by certified experts.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about IT consultancy">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-1" aria-labelledby="svc7">
+      <span class="service-num">07</span>
+      <div class="service-icon si-print" aria-hidden="true"><i class="fas fa-print"></i></div>
+      <h3 id="svc7">Professional Printing Services</h3>
+      <p>High-quality printing for all your business needs. Branding materials, banners, business cards, brochures, branded merchandise, and large-format prints — vivid colors, premium finishes, fast delivery.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about printing services">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </article>
+    <article class="service-card reveal reveal-delay-1" aria-labelledby="svc8">
+      <span class="service-num">08</span>
+      <div class="service-icon si-design" aria-hidden="true"><i class="fas fa-paint-brush"></i></div>
+      <h3 id="svc8">Graphics Designing</h3>
+      <p>Transform your ideas into compelling visual experiences. Our creative team delivers brand identity, marketing materials, and digital assets that resonate with your audience and elevate your online presence.</p>
+      <a href="#contact" class="service-link" aria-label="Learn more about graphic design">LEARN MORE <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+
+    </article>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="section-header" style="text-align:center">
+    <div class="section-tag reveal" style="justify-content:center">WHY ELGONNOVA</div>
+    <h2 class="section-title reveal" id="why-heading">Why Clients <span>Choose Us</span></h2>
+    <p class="section-sub reveal" style="margin:0 auto">We don't just deliver projects — we build partnerships that drive lasting success for your organization.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal reveal-delay-1">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+      <h3>FAST DELIVERY</h3>
+      <p>We respect your timelines. Agile processes and dedicated teams ensure projects are delivered on time, every time, without compromising quality.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-2">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-users-cog"></i></div>
+      <h3>EXPERT TEAM</h3>
+      <p>Certified professionals with deep expertise across software, hardware, IoT, data, and design — bringing global-standard skills to every engagement.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-3">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-tags"></i></div>
+      <h3>AFFORDABLE PRICING</h3>
+      <p>World-class solutions at competitive local rates. We offer flexible pricing models and payment plans to ensure technology is accessible to all businesses.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-4">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-atom"></i></div>
+      <h3>MODERN TECHNOLOGIES</h3>
+      <p>We use cutting-edge frameworks, tools, and methodologies to ensure your solutions are built for today and scalable for tomorrow.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-5">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
+      <h3>RELIABLE SUPPORT</h3>
+      <p>24/7 technical support and maintenance. Our dedicated support team ensures your systems run smoothly at all times with rapid response to any issues.</p>
+    </div>
+    <div class="why-card reveal reveal-delay-6">
+      <div class="why-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+      <h3>INNOVATIVE SOLUTIONS</h3>
+      <p>We constantly explore new technologies and approaches, bringing innovative thinking to solve complex problems in uniquely effective ways.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-labelledby="portfolio-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">OUR WORK</div>
+    <h2 class="section-title reveal" id="portfolio-heading">Featured <span>Projects</span></h2>
+    <p class="section-sub reveal">A showcase of our most impactful work — each project tells a story of innovation, problem-solving, and excellence.</p>
+  </div>
+  <div class="filter-bar reveal" role="group" aria-label="Portfolio filter">
+    <button class="filter-btn active" data-filter="all">ALL PROJECTS</button>
+    <button class="filter-btn" data-filter="web">WEBSITES</button>
+    <button class="filter-btn" data-filter="software">SOFTWARE</button>
+    <button class="filter-btn" data-filter="data">DATA</button>
+    <button class="filter-btn" data-filter="iot">IoT</button>
+  </div>
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="portfolio-item reveal reveal-delay-1" data-cat="web">
+      <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=700&q=80" alt="E-commerce platform project" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">WEB DEVELOPMENT</div>
+        <div class="portfolio-name">RETAIL E-COMMERCE PLATFORM</div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-2" data-cat="software">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Business management system" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">CUSTOM SOFTWARE</div>
+        <div class="portfolio-name">SCHOOL MANAGEMENT SYSTEM</div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-3" data-cat="data">
+      <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=80" alt="Data analytics dashboard" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">DATA ANALYSIS</div>
+        <div class="portfolio-name">AGRI ANALYTICS DASHBOARD</div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-4" data-cat="iot">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80" alt="IoT smart monitoring system" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">IoT SYSTEMS</div>
+        <div class="portfolio-name">SMART FARM MONITORING</div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-5" data-cat="web">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&q=80" alt="Corporate website design" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">WEB DEVELOPMENT</div>
+        <div class="portfolio-name">CORPORATE BRAND WEBSITE</div>
+      </div>
+    </div>
+    <div class="portfolio-item reveal reveal-delay-6" data-cat="software">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80" alt="Hospital management software" loading="lazy" />
+      <div class="portfolio-overlay">
+        <div class="portfolio-tag">CUSTOM SOFTWARE</div>
+        <div class="portfolio-name">HOSPITAL MANAGEMENT SYSTEM</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CEO MESSAGE -->
+<section id="ceo" aria-labelledby="ceo-heading">
+  <div class="ceo-grid">
+    <div class="ceo-img-wrap reveal from-left">
+      <div class="ceo-img-frame">
+        <img src="static/images/emma1.jpeg" alt="Mangara Emmanuel Fred, CEO of ElgonNova Technologies" class="ceo-img" loading="lazy" />
+        <div class="ceo-badge">CEO & FOUNDER</div>
+      </div>
+    </div>
+    <div class="reveal from-right">
+      <div class="section-tag">A MESSAGE FROM THE CEO</div>
+      <h2 class="section-title" id="ceo-heading">The <span>Vision</span> That Drives Us</h2>
+      <blockquote class="ceo-quote">
+        "Welcome to ElgonNova Technologies.
+        Technology is transforming the world at an incredible pace, and Africa has immense potential to become a global center for innovation and digital growth. At ElgonNova Technologies, we believe that African solutions can solve African challenges and compete on the global stage.
+        Our goal is not only to provide technology services but also to create meaningful impact through innovation, creativity, and problem-solving. Every website we build, every software solution we develop, every system we maintain, and every client we serve reflects our commitment to quality, professionalism, and excellence.
+        We are proud to be based in Mbale, Uganda, and even prouder to carry a vision that reaches beyond borders. We aspire to serve clients throughout Uganda, East Africa, and the entire African continent while contributing to the development of local technological capacity.
+        As we grow, we are committed to expanding into emerging fields such as machine learning, cybersecurity, networking, and technology training because we believe the future belongs to those who innovate and continuously learn.
+        To our clients, partners, and supporters, thank you for believing in our vision. Together, we can build a smarter, stronger, and more technologically empowered Africa.
+        Innovation for Africa. Solutions for the Future."
+      </blockquote>
+      <p style="color:var(--gray);line-height:1.8;margin-bottom:28px;">I invite you to be part of this journey. Whether you're a startup looking for your first website, an enterprise seeking digital transformation, or a partner who shares our vision — ElgonNova Technologies is your home for innovation.</p>
+      <div class="ceo-name">MANGARA EMMANUEL FRED</div>
+      <div class="ceo-title">CHIEF EXECUTIVE OFFICER · ELGONNOVA TECHNOLOGIES</div>
+      <div class="ceo-sig" aria-hidden="true">M.E.Fred</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" aria-labelledby="team-heading">
+  <div class="section-header" style="text-align:center">
+    <div class="section-tag reveal" style="justify-content:center">THE MINDS BEHIND</div>
+    <h2 class="section-title reveal" id="team-heading">Meet Our <span>Expert Team</span></h2>
+    <p class="section-sub reveal" style="margin:0 auto">A passionate, highly skilled team united by one mission: to deliver exceptional technology solutions.</p>
+  </div>
+  <div class="team-grid">
+    <article class="team-card reveal reveal-delay-1" aria-labelledby="tm1">
+      <div class="team-photo-wrap">
+        <img src="static/images/mangara_one.jpeg" alt="CEO and Founder of ElgonNova Technologies" class="team-photo" loading="lazy" />
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" id="tm1">MANGARA EMMANUEL FRED</h3>
+        <p class="team-role">CEO & FOUNDER</p>
+        <div class="team-socials" aria-label="mangara emmanuel fred social links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="team-card reveal reveal-delay-2" aria-labelledby="tm2">
+      <div class="team-photo-wrap">
+        <img src="static/images/andre.jpg" alt="Lead Software Engineer" class="team-photo" loading="lazy" />
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" id="tm2">WABUBUYI ANDREW MUKWELI</h3>
+        <p class="team-role">LEAD SOFTWARE ENGINEER & CO-FOUNDER</p>
+        <div class="team-socials" aria-label="Wabubuyi Andrew Mukweli social links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="team-card reveal reveal-delay-3" aria-labelledby="tm3">
+      <div class="team-photo-wrap">
+        <img src="static/images/hacker img.jpg" alt="UI/UX Designer" class="team-photo" loading="lazy" />
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" id="tm3">OTIM DANIEL</h3>
+        <p class="team-role">UI/UX DESIGNER</p>
+        <div class="team-socials" aria-label="Otim Daniel social links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+          <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="team-card reveal reveal-delay-4" aria-labelledby="tm4">
+      <div class="team-photo-wrap">
+        <img src="static/images/stella1.jpeg" alt="Data Analyst" class="team-photo" loading="lazy" />
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" id="tm4">NAMBOOWA STELLA</h3>
+        <p class="team-role">DATA ANALYST</p>
+        <div class="team-socials" aria-label="Namboowa Stella social links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="team-card reveal reveal-delay-5" aria-labelledby="tm5">
+      <div class="team-photo-wrap">
+        <img src="static/images/omara_one.jpeg" alt="Network and Hardware Specialist" class="team-photo" loading="lazy" />
+      </div>
+      <div class="team-info">
+        <h3 class="team-name" id="tm5">OMARA ANDREW</h3>
+        <p class="team-role">SENIOR JAVA DEVELOPER & CTO</p>
+        <div class="team-socials" aria-label="Omara Andrew social links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-labelledby="testi-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">CLIENT VOICES</div>
+    <h2 class="section-title reveal" id="testi-heading">What Our <span>Clients Say</span></h2>
+    <p class="section-sub reveal">Real words from real clients who trusted ElgonNova to transform their businesses.</p>
+  </div>
+  <div class="testimonial-wrap reveal">
+    <div class="testimonial-track" id="testiTrack">
+      <div class="testi-card">
+        <div class="testi-quote-icon" aria-hidden="true">"</div>
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"ElgonNova completely transformed our school's administrative systems. The management software they built is intuitive, powerful, and has saved us countless hours every week. Truly world-class work from a local team."</p>
+        <div class="testi-author">
+          <!-- <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="Mr. Robert Kasozi" class="testi-avatar" loading="lazy" /> -->
+          <div>
+            <div class="testi-name">ROBERT KASOZI</div>
+            <div class="testi-role">Headmaster, Mbale Central Academy</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-icon" aria-hidden="true">"</div>
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"The e-commerce website ElgonNova built for us tripled our online sales in just 3 months. Their attention to design, SEO, and user experience is exceptional. I recommend them to every business owner I meet."</p>
+        <div class="testi-author">
+          <!-- <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" alt="Ms. Fatuma Nakato" class="testi-avatar" loading="lazy" /> -->
+          <div>
+            <div class="testi-name">FATUMA NAKATO</div>
+            <div class="testi-role">Owner, Nakato Fashion Hub</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-icon" aria-hidden="true">"</div>
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"Their IoT solution for our farm monitoring has been a game-changer. Real-time data on soil moisture, temperature, and crop health — all accessible from my phone. ElgonNova is years ahead of other tech companies in the region."</p>
+        <div class="testi-author">
+          <!-- <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80" alt="Dr. James Wamono" class="testi-avatar" loading="lazy" /> -->
+          <div>
+            <div class="testi-name">DR. JAMES WAMONO</div>
+            <div class="testi-role">Agricultural Director, Elgon Farms Ltd</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-icon" aria-hidden="true">"</div>
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <p class="testi-text">"ElgonNova's data analysis team provided insights that completely changed how we understand our customers. Their dashboards are beautiful, interactive, and easy to use. Excellent investment for any serious business."</p>
+        <div class="testi-author">
+          <!-- <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Mr. Patrick Oluka" class="testi-avatar" loading="lazy" /> -->
+          <div>
+            <div class="testi-name">PATRICK OLUKA</div>
+            <div class="testi-role">CEO, Trans-Nile Trading Co.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote-icon" aria-hidden="true">"</div>
+        <div class="testi-stars" aria-label="4 stars">★★★★★</div>
+        <p class="testi-text">"The IT consultancy services helped us design a network infrastructure that's secure, fast, and scalable. They explained everything clearly and were patient with our questions. Highly professional and trustworthy team."</p>
+        <div class="testi-author">
+            <!-- <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Sarah Achola" class="testi-avatar" loading="lazy" /> -->
+          <div>
+            <div class="testi-name">SARAH ACHOLA</div>
+            <div class="testi-role">IT Manager, Mbale Regional Hospital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-controls" aria-label="Testimonial navigation">
+      <button class="testi-arrow" id="testiPrev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <button class="testi-arrow" id="testiNext" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner" role="complementary" aria-label="Call to action">
+  <h2 class="reveal">Ready to Build Something <span style="background:linear-gradient(90deg,var(--orange),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Extraordinary?</span></h2>
+  <p class="reveal">Let's discuss your project and transform your vision into a digital reality.</p>
+  <div class="cta-btns reveal">
+    <a href="#contact" class="btn-primary"><i class="fas fa-rocket" aria-hidden="true"></i> START YOUR PROJECT</a>
+    <a href="tel:+256753825829" class="btn-outline"><i class="fas fa-phone" aria-hidden="true"></i> CALL US NOW</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">HAVE QUESTIONS?</div>
+    <h2 class="section-title reveal" id="faq-heading">Frequently Asked <span>Questions</span></h2>
+    <p class="section-sub reveal">Everything you need to know about working with ElgonNova Technologies.</p>
+  </div>
+  <div class="faq-list reveal" id="faqList" role="list">
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>How long does it take to build a website?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>Project timelines vary depending on complexity. A simple landing page can be completed in 3–5 days. A full business website typically takes 2–4 weeks. Complex e-commerce or web applications may take 4–12 weeks. We provide a detailed timeline estimate during our initial consultation.</p></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>Do you offer ongoing support and maintenance?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>Yes! We offer comprehensive maintenance packages that include regular updates, security monitoring, performance optimization, content updates, and 24/7 technical support. Our maintenance plans are affordable and customizable to your specific needs.</p></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>What technologies do you use for software development?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>We use a wide range of modern technologies including React, Vue.js, Node.js, Python, Django, PHP/Laravel, Flutter for mobile apps, PostgreSQL, MongoDB, and cloud platforms like AWS and Google Cloud. We select the best technology stack based on your specific project requirements.</p></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>How do you handle data privacy and security?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>Data security is our top priority. We implement industry-standard security practices including SSL encryption, secure coding practices, regular security audits, data backup systems, and compliance with relevant data protection regulations. We sign NDAs when required to protect client confidentiality.</p></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>What is your pricing model?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. All pricing is transparent with no hidden fees. We provide detailed quotes after understanding your requirements. Payment plans are available for larger projects. Contact us for a free consultation and quote.</p></div>
+    </div>
+    <div class="faq-item" role="listitem">
+      <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <h4>Can you work with clients outside Mbale or Uganda?</h4>
+        <span class="faq-toggle" aria-hidden="true"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-ans"><p>Absolutely! While we are based in Mbale, Uganda, we serve clients across East Africa and internationally. We have successfully completed remote projects for clients in Kenya, Tanzania, Rwanda, and beyond. We use modern collaboration tools to ensure seamless communication regardless of location.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section id="blog" aria-labelledby="blog-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">KNOWLEDGE HUB</div>
+    <h2 class="section-title reveal" id="blog-heading">Latest <span>Insights</span></h2>
+    <p class="section-sub reveal">Stay ahead of the tech curve with our latest articles, guides, and industry insights.</p>
+  </div>
+  <div class="blog-grid">
+    <article class="blog-card reveal reveal-delay-1">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80" alt="IoT revolution in Uganda agriculture" class="blog-img" loading="lazy" />
+      <div class="blog-body">
+        <span class="blog-tag">IoT · AGRICULTURE</span>
+        <h3 class="blog-title">How IoT Is Revolutionizing Farming in Uganda's Elgon Region</h3>
+        <p class="blog-excerpt">Smart sensors, real-time monitoring, and automated irrigation are transforming how Ugandan farmers work — and ElgonNova is at the forefront of this revolution...</p>
+        <div class="blog-meta">
+          <span>MAY 2025</span>
+          <span>8 MIN READ</span>
+        </div>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-2">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=700&q=80" alt="Digital transformation for SMEs" class="blog-img" loading="lazy" />
+      <div class="blog-body">
+        <span class="blog-tag">DIGITAL TRANSFORMATION</span>
+        <h3 class="blog-title">5 Ways Digital Transformation Can Grow Your Ugandan Business in 2025</h3>
+        <p class="blog-excerpt">From automated invoicing to AI-powered customer service, discover how small businesses across Uganda are leveraging technology to compete at scale...</p>
+        <div class="blog-meta">
+          <span>APR 2025</span>
+          <span>6 MIN READ</span>
+        </div>
+      </div>
+    </article>
+    <article class="blog-card reveal reveal-delay-3">
+      <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=80" alt="Data analytics for business" class="blog-img" loading="lazy" />
+      <div class="blog-body">
+        <span class="blog-tag">DATA ANALYSIS</span>
+        <h3 class="blog-title">Why Data Analytics Is the Most Underutilized Asset for East African SMEs</h3>
+        <p class="blog-excerpt">Most small businesses are sitting on a goldmine of data they're not using. Here's how data analysis can reveal insights that transform your strategy...</p>
+        <div class="blog-meta">
+          <span>MAR 2025</span>
+          <span>5 MIN READ</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<div id="partners" aria-label="Trusted partners">
+  <div style="text-align:center;margin-bottom:36px;">
+    <div class="section-tag reveal" style="justify-content:center">TRUSTED BY ORGANIZATIONS ACROSS EAST AFRICA</div>
+  </div>
+  <div class="partners-wrap" aria-hidden="true">
+    <div class="partners-track">
+      <span class="partner-logo">MINISTRY OF ICT · UGANDA</span>
+      <span class="partner-logo">ELGON FARMS LTD</span>
+      <span class="partner-logo">TRANS-NILE TRADING</span>
+      <span class="partner-logo">NAKIVALE TECH HUB</span>
+      <span class="partner-logo">UGANDA TELECOM</span>
+      <span class="partner-logo">ELGON FARMS LTD</span>
+      <span class="partner-logo">TRANS-NILE TRADING</span>
+      <span class="partner-logo">NAKIVALE TECH HUB</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="section-header">
+    <div class="section-tag reveal">GET IN TOUCH</div>
+    <h2 class="section-title reveal" id="contact-heading">Let's <span>Work Together</span></h2>
+    <p class="section-sub reveal">Ready to start your project? Have a question? We'd love to hear from you. Reach out and let's talk.</p>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info">
+        <div class="contact-card reveal">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-card-title">OUR LOCATION</div>
+            <p>Mbale City, Eastern Uganda<br>Near Mount Elgon National Park</p>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-1">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-card-title">EMAIL US</div>
+            <a href="mailto:elgonnovatechnologies@gmail.com">elgonnovatechnologies@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-2">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-card-title">CALL OR WHATSAPP</div>
+            <a href="tel:+256753825829">+256 753 825 829</a>
+            <a href="tel:+256771467507">+256 771 467 507</a>
+          </div>
+        </div>
+        <div class="contact-card reveal reveal-delay-3">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="contact-card-title">BUSINESS HOURS</div>
+            <p>Mon – Fri: 8:00 AM – 6:00 PM<br>Sat: 9:00 AM – 3:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links reveal" aria-label="Social media links">
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/256753825829" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="map-wrap reveal" aria-label="Office location map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63905.3282!2d34.165!3d1.0752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177e4ac58ac6e1bf%3A0x2a7fae0ae5b8d8d8!2sMbale%2C%20Uganda!5e0!3m2!1sen!2sug!4v1234567890"
+          title="ElgonNova Technologies location in Mbale, Uganda"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    <div class="contact-form reveal from-right">
+      <h3 style="font-family:var(--font-head);font-size:1.1rem;color:var(--white);margin-bottom:28px;letter-spacing:2px;">SEND US A MESSAGE</h3>
+      <form id="contactForm" novalidate aria-label="Contact form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">FIRST NAME</label>
+            <input type="text" id="fname" name="firstName" placeholder="Owen Clement" required autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="lname">LAST NAME</label>
+            <input type="text" id="lname" name="lastName" placeholder="Ddamulira" required autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">EMAIL ADDRESS</label>
+          <input type="email" id="femail" name="email" placeholder="ddamulira1234@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="fphone">PHONE NUMBER</label>
+          <input type="tel" id="fphone" name="phone" placeholder="+256 700 000 000" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="fservice">SERVICE OF INTEREST</label>
+          <select id="fservice" name="service">
+            <option value="">— Select a Service —</option>
+            <option value="web">Website Development</option>
+            <option value="software">Custom Software</option>
+            <option value="repair">Computer Repair & Maintenance</option>
+            <option value="data">Data Analysis</option>
+            <option value="iot">Internet of Things (IoT)</option>
+            <option value="consult">IT Consultancy</option>
+            <option value="print">Professional Printing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">YOUR MESSAGE</label>
+          <textarea id="fmessage" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;" aria-label="Send message">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i> SEND MESSAGE
+        </button>
+        <div id="formMsg" role="alert" aria-live="polite" style="margin-top:14px;font-family:var(--font-mono);font-size:.78rem;text-align:center;display:none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="process" aria-labelledby="process-heading" style="background:linear-gradient(180deg,var(--black) 0%,#0a0a14 100%);">
+  <div class="section-header" style="text-align:center">
+    <div class="section-tag reveal" style="justify-content:center">OUR PROCESS</div>
+    <h2 class="section-title reveal" id="process-heading">How We <span>Deliver Excellence</span></h2>
+    <p class="section-sub reveal" style="margin:0 auto">A proven, transparent process that ensures every project is delivered on time, on budget, and beyond expectations.</p>
+  </div>
+  <div class="process-track reveal">
+    <div class="process-step">
+      <div class="process-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
+      <div class="process-num">01</div>
+      <h3>DISCOVERY</h3>
+      <p>We start by deeply understanding your business, goals, target audience, and technical requirements through detailed consultations.</p>
+    </div>
+    <div class="process-line" aria-hidden="true"></div>
+    <div class="process-step">
+      <div class="process-icon"><i class="fas fa-pencil-ruler" aria-hidden="true"></i></div>
+      <div class="process-num">02</div>
+      <h3>DESIGN</h3>
+      <p>Our designers craft stunning UI/UX prototypes and wireframes, ensuring every interface is intuitive, beautiful, and on-brand.</p>
+    </div>
+    <div class="process-line" aria-hidden="true"></div>
+    <div class="process-step">
+      <div class="process-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+      <div class="process-num">03</div>
+      <h3>DEVELOPMENT</h3>
+      <p>Our engineers build your solution using modern technologies, following best practices for performance, security, and scalability.</p>
+    </div>
+    <div class="process-line" aria-hidden="true"></div>
+    <div class="process-step">
+      <div class="process-icon"><i class="fas fa-vial" aria-hidden="true"></i></div>
+      <div class="process-num">04</div>
+      <h3>TESTING</h3>
+      <p>Rigorous quality assurance testing across devices, browsers, and use cases ensures your product is bug-free and performant.</p>
+    </div>
+    <div class="process-line" aria-hidden="true"></div>
+    <div class="process-step">
+      <div class="process-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+      <div class="process-num">05</div>
+      <h3>LAUNCH</h3>
+      <p>We deploy your solution with zero downtime, provide training, and offer ongoing support to ensure lasting success.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE CHAT WIDGET -->
+<!-- <div id="chatWidget" aria-label="Live chat support">
+  <button id="chatToggle" aria-label="Open live chat" aria-expanded="false" aria-haspopup="dialog">
+    <i class="fas fa-comment-dots chat-icon-open" aria-hidden="true"></i>
+    <span class="chat-badge" aria-label="1 unread message">1</span>
+  </button>
+  <div id="chatBox" role="dialog" aria-label="ElgonNova live chat" aria-modal="false">
+    <div class="chat-header">
+      <div class="chat-avatar" aria-hidden="true">⚡</div>
+      <div>
+        <div class="chat-name">ElgonNova Support</div>
+        <div class="chat-status"><span class="online-dot" aria-hidden="true"></span>Online — Typically replies instantly</div>
+      </div>
+      <button id="chatClose" aria-label="Close chat" class="chat-close-btn"><i class="fas fa-times" aria-hidden="true"></i></button>
+    </div>
+    <div id="chatFeed" class="chat-feed" role="log" aria-live="polite" aria-label="Chat messages"></div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type your message..." aria-label="Chat message input" maxlength="300" />
+      <button id="chatSend" aria-label="Send message"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div> -->
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo" aria-label="ElgonNova Technologies Home">
+        <div class="logo-icon" aria-hidden="true"><img src="static/images/elgonnova_logo.png" alt="ElgonNova Technologies Logo"></div>
+        Elgon<span>Nova</span>
+      </a>
+      <p>Pioneering digital excellence in East Africa. We build the technology that powers Uganda's future — one innovation at a time.</p>
+      <div class="social-links" style="margin-top:20px" aria-label="Footer social media links">
+        <a href="https://www.facebook.com/profile.php?id=61589573307338" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul class="footer-links" role="list">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>OUR SERVICES</h4>
+      <ul class="footer-links" role="list">
+        <li><a href="#services">Website Development</a></li>
+        <li><a href="#services">Custom Software</a></li>
+        <li><a href="#services">Computer Repair</a></li>
+        <li><a href="#services">Data Analysis</a></li>
+        <li><a href="#services">IoT Solutions</a></li>
+        <li><a href="#services">IT Consultancy</a></li>
+        <li><a href="#services">Printing Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>NEWSLETTER</h4>
+      <p style="color:var(--gray);font-size:.9rem;margin-bottom:16px;line-height:1.7">Stay updated with our latest news, tech insights, and special offers.</p>
+      <div class="newsletter-form" role="form" aria-label="Newsletter subscription">
+        <form action="https://preview.mailerlite.io/forms/2364013/187967187089098037/share">
+          <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+          <button type="button" aria-label="Subscribe to newsletter"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+        </form>
+      </div>
+      <p style="color:var(--gray);font-size:.82rem;margin-top:14px;line-height:1.6">
+        <i class="fas fa-map-marker-alt" style="color:var(--orange);margin-right:6px" aria-hidden="true"></i>Mbale City, Uganda<br>
+        <i class="fas fa-envelope" style="color:var(--orange);margin-right:6px" aria-hidden="true"></i>elgonnovatechnologies@gmail.com
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 <span>ElgonNova Technologies</span>. All Rights Reserved. Developed by ElgonNova technologies, Mbale Uganda.</div>
+    <div style="display:flex;gap:20px" aria-label="Legal links">
+      <a href="#" style="color:var(--gray);font-size:.84rem;text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--gray)'">Privacy Policy</a>
+      <a href="#" style="color:var(--gray);font-size:.84rem;text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--gray)'">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<!-- <a href="https://wa.me/256753825829?text=Hello%20ElgonNova%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+   id="whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a> -->
+
+<!-- BACK TO TOP -->
+<button id="back-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<script src="static/js/script.js"></script>
+<!-- Live Chat feature-->
+ <!--Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68bbee5cf58c911925a71999/1j4f1m6vs';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
