@@ -71,6 +71,7 @@
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(5,5,8,.97); backdrop-filter: blur(20px); z-index: 8999; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mobile-menu a .nav-cta { background: linear-gradient(135deg, var(--orange), #ff3d00); color: #fff; padding: 10px 24px; border-radius: 6px; font-family: var(--font-body); font-weight: 700; font-size: .9rem; text-decoration: none; letter-spacing: 1px; transition: all .3s; box-shadow: 0 0 20px var(--orange-glow); }
     .mobile-menu.open { display: flex; }
     .mobile-menu a { color: var(--white); text-decoration: none; font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 3px; transition: color .2s; }
     .mobile-menu a:hover { color: var(--orange); }
